@@ -43,7 +43,7 @@ Example of running cifar10_8_255_simplified:
 conda activate alpha-beta-crown
 cd complete_verifier
 python abcrown.py --config exp_setups/cifar2020_8_255.yaml # running original abcrown
-python run_IDNN.py --config exp_setups/cifar2020_8_255.yaml # running original abcrown
+python run_IDNN.py --config exp_setups/cifar2020_8_255.yaml # running abcrown with reduced network
 ```
 
 To export the reduced network in onnx networks:

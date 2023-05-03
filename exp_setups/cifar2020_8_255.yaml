@@ -1,0 +1,20 @@
+# Configuration file for running the cifar2020 benchmark (all properties).
+model:
+  onnx_path: vnncomp2022_benchmarks/benchmarks/cifar2020/onnx/cifar10_8_255_simplified.onnx  # Please update this path to point to your own VNN-COMP 2022 repo
+data:
+  dataset: CIFAR_ERAN
+  select_instance: [14, 15, 45, 51, 71, 72, 73, 76, 80, 112, 116, 131, 142, 144, 148, 150, 151, 153, 170, 174, 204, 217, 221, 248, 252, 257, 268, 274, 286, 292] # 30 properties
+specification:
+  epsilon: 0.03137
+solver:
+  batch_size: 200
+  beta-crown:
+    lr_beta: 0.01
+bab:
+  timeout: 300
+  branching:
+    reduceop: max
+    candidates: 10
+  initial_max_domains: 10
+attack:
+  pgd_order: skip

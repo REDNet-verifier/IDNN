@@ -1,0 +1,19 @@
+model:
+  # download the network at https://files.sri.inf.ethz.ch/eran/nets/onnx/mnist/skip__DiffAI.onnx
+  onnx_path: skip__DiffAI.onnx # update to your own path
+  input_shape: [1, 1, 28, 28]
+data:
+  dataset: MNIST_ERAN
+  select_instance: [94, 104, 167, 185, 191, 219, 230, 257, 261, 287, 300, 304, 322, 329, 346]
+specification:
+  epsilon: 0.175 # 15 properties
+attack:
+  pgd_restarts: 100
+solver:
+  batch_size: 1024
+  beta-crown:
+    iteration: 20
+bab:
+  timeout: 300
+  branching:
+    reduceop: max

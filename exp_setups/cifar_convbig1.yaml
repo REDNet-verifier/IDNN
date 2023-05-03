@@ -1,0 +1,15 @@
+model:
+  onnx_path: vnncomp2022_benchmarks/benchmarks/cifar2020/onnx/convBigRELU__PGD.onnx # Please update this path to point to your own VNN-COMP 2022 repo
+data:
+  dataset: CIFAR
+  select_instance: [115, 126, 137, 159, 174, 182, 183, 190, 219, 221, 270, 299, 301, 317, 335, 347, 366, 372, 380, 386, 388, 402, 410, 427, 443, 445, 466] # 27 properties
+specification:
+  epsilon: 0.00784313725
+attack:
+  pgd_restarts: 100
+solver:
+  batch_size: 64
+  beta-crown:
+    iteration: 20
+bab:
+  timeout: 300

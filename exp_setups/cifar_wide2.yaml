@@ -1,0 +1,27 @@
+general:
+  conv_mode: matrix
+model:
+  onnx_path: vnncomp2022_benchmarks/benchmarks/oval21/onnx/cifar_wide_kw.onnx  # Please update this path to point to your own VNN-COMP 2022 repo
+data:
+  dataset: CIFAR_ERAN
+  select_instance: [49, 51, 62, 86, 194, 224, 270] # 7 properties
+specification:
+  epsilon: 0.0045
+solver:
+  batch_size: 2000
+  beta-crown:
+    lr_beta: 0.01
+  start_save_best: -1
+  prune_after_crown: False
+bab:
+  timeout: 300
+  branching:
+    reduceop: max
+    candidates: 10
+attack:
+  pgd_order: middle
+
+
+
+
+

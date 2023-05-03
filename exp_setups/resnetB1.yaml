@@ -1,0 +1,25 @@
+# self-defined epsilon property 
+model:
+  onnx_quirks: "{'Reshape': {'fix_batch_size': True}}"
+  onnx_path: vnncomp2022_benchmarks/benchmarks/sri_resnet_b/onnx/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2.onnx # Please update this path to point to your own VNN-COMP 2022 repo
+data:
+  dataset: CIFAR_ERAN
+  select_instance: [3, 18, 19, 20, 41, 50, 55, 62, 81, 92, 108, 122, 137, 142, 144, 148] # 16 properties
+specification:
+  epsilon: 0.0033
+solver:
+  batch_size: 1024
+  beta-crown:
+    lr_beta: 0.05
+    iteration: 10
+  prune_after_crown: True
+bab:
+  timeout: 300
+  initial_max_domains: 100
+  branching:
+    method: kfsb-intercept-only
+    reduceop: max
+    candidates: 10
+  interm_transfer: False
+attack:
+  pgd_order: middle

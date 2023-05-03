@@ -1,0 +1,19 @@
+model:
+  # download the network at https://files.sri.inf.ethz.ch/eran/nets/onnx/mnist/convMedGRELU__Point.onnx
+  onnx_path: convMedGRELU__Point.onnx
+  input_shape: [1, 1, 28, 28] # update to your own path
+data:
+  dataset: MNIST_ERAN
+  select_instance: [0, 2, 10, 17, 26, 28, 32, 37, 41, 42, 58, 69, 77, 78, 80, 84, 90, 99, 110, 126, 134, 147, 148, 153, 161, 169, 177, 180, 186, 190, 198] # 31 properties
+specification:
+  epsilon: 0.12
+attack:
+  pgd_restarts: 100
+solver:
+  batch_size: 2048
+  beta-crown:
+    iteration: 20
+bab:
+  timeout: 300
+  branching:
+    reduceop: max

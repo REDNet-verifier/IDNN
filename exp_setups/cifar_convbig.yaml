@@ -1,0 +1,13 @@
+# Configuration file for running the cifar2020 benchmark (all properties).
+general:
+  root_path: vnncomp2022_benchmarks/benchmarks/cifar2020  # Please update this path to point to your own VNN-COMP 2022 repo
+  csv_name: instances.csv
+data:
+  dataset: CIFAR
+  select_instance: [141, 147, 150, 151, 161, 162, 169, 175, 183, 198] # 10 properties
+attack:
+  pgd_restarts: 100
+solver:
+  batch_size: 64
+  beta-crown:
+    iteration: 20

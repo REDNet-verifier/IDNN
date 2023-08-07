@@ -38,7 +38,24 @@ Usage
 -------------
 To run the benchmarks, please follow the command in the respective .yaml; download the VNNCOMP2021/2022/ERAN networks accordingly; and update the network path in .yaml configuration file.
 
-Example of running cifar10_8_255_simplified:
+The configuration files for all the networks and tested properties can be found under folder **exp_setups**. The networks' names are abbreviated in the paper due to the limited space, we hereby provide the table to match the networks' names in the paper and in this repo.
+
+| Network name in the paper  |   Network name in this repo  |
+| :------------------------- | :--------------------------- |
+| M\_256x6   | mnist\_256x6 |
+| M\_ConvMed   | mnist\_convmed |
+| M\_ConvBig   | mnist\_convbig |
+| M\_SkipNet   | mnist\_skipnet |
+| C\_8\_255Simp   | cifar2020\_8\_255 |
+| C\_WideKW   | cifar\_wide |
+| C\_ConvBig   | cifar\_convbig |
+| C\_Resnet4b  | resnet4b |
+| C\_ResnetA   | resnetA |
+| C\_ResnetB   | resnetB |
+| C\_100\_Med   | cifar100\_med |
+| C\_100\_Large  | cifar100\_large |
+
+Example of running network C\_8\_255Simp:
 ```
 conda activate alpha-beta-crown
 cd complete_verifier

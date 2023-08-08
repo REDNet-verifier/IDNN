@@ -1,7 +1,7 @@
 REDNet pre-processing
 ========
 
-REDNet is a pre-processing technique that uses the state-of-the-art bound propagator to detect stable ReLU neurons and then delete them in a way that preserves network manner. It is instantiated on CROWN propagator in alpha-beta-CROWN ([alpha-beta-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN)). 
+[REDNet](http://arxiv.org/abs/2308.03330) is a pre-processing technique that uses the state-of-the-art bound propagator to detect stable ReLU neurons and then delete them in a way that preserves network manner. It is instantiated on CROWN propagator in alpha-beta-CROWN ([alpha-beta-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN)). 
 
 
 Requirements 
@@ -38,7 +38,7 @@ Usage
 -------------
 To run the benchmarks, please follow the command in the respective .yaml; download the VNNCOMP2021/2022/ERAN networks accordingly; and update the network path in .yaml configuration file.
 
-The configuration files for all the networks and tested properties can be found under folder **exp_setups**. The networks' names are abbreviated in the paper due to the limited space, we hereby provide the table to match the networks' names in the paper and in this repo.
+The configuration files for all the networks and tested properties can be found under folder **exp_setups**. The networks' names are abbreviated in [the paper](http://arxiv.org/abs/2308.03330) due to the limited space, we hereby provide the table to match the networks' names in the paper and in this repo.
 
 | Network name in the paper  |   Network name in this repo  |
 | :------------------------- | :--------------------------- |
